@@ -22,5 +22,13 @@
     "rules": {
         "react-hooks/rules-of-hooks": "error", // Vérifie les règles des Hooks
         "react-hooks/exhaustive-deps": "warn"  // Vérifie les tableaux de dépendances
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                   "extensions": [".js", ".jsx", ".ts", ".tsx"],
+                "moduleDirectory": ["node_modules", "src/"]
+            }
+        }
     }
 }
