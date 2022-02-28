@@ -13,4 +13,4 @@ const CustomizedSlider = styled(Slider)`
   }
 `;
 
-export default CustomizedSlider
+export default CustomizedSlider;

@@ -1,9 +1,10 @@
-import { useState } from "react";
-import logo from "./logo.svg";
-import "./App.scss";
-import { Counter } from "./components/Counter/Counter";
-import CustomSlider from './components/customSlider/CustomSlider';
-function App() {
+import React, { useState } from 'react';
+import Counter from '../../components/Counter/Counter';
+import CustomSlider from '../../components/CustomSlider/CustomSlider';
+// eslint-disable-next-line import/no-unresolved
+import logo from '@/logo.svg';
+
+function Home() {
   const [count, setCount] = useState(0);
 
   return (
@@ -12,12 +13,18 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
+          <button type="button" onClick={() => setCount((currentCount) => currentCount + 1)}>
+            count is:
+            {' '}
+            {count}
           </button>
         </p>
         <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
+          Edit
+          {' '}
+          <code>App.jsx</code>
+          {' '}
+          and save to test HMR updates.
         </p>
         <CustomSlider />
         <p>
@@ -29,7 +36,7 @@ function App() {
           >
             Learn React
           </a>
-          {" | "}
+          {' | '}
           <a
             className="App-link"
             href="https://vitejs.dev/guide/features.html"
@@ -39,13 +46,13 @@ function App() {
             Vite Docs
           </a>
         </p>
-        
+
         <Counter />
-        
+
       </header>
-     
+
     </div>
   );
 }
 
-export default App;
+export default Home;
